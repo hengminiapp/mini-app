@@ -140,9 +140,19 @@ body{
 
 <script>
 function showPage(name){
-  Telegram.WebApp.showAlert("បើកទំព័រ " + name + " 👍");
+  document.body.innerHTML = `
+    <div style="padding:20px;text-align:center;font-family:Arial,sans-serif;">
+      <h1>🛒 ${name}</h1>
+      <h2>Computer Oxford</h2>
+      <p>សូមមើលទំនិញ និងព័ត៌មាន ${name}</p>
+      <p>📞 012 517 853</p>
+      <p>📞 097 868 8585</p>
+      <button onclick="location.reload()" style="padding:12px 25px;border:0;border-radius:10px;background:#1677ff;color:white;font-size:16px;">
+        ⬅️ ត្រឡប់ក្រោយ
+      </button>
+    </div>
+  `;
 }
-
 </script>
 
 </body>
