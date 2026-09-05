@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html lang="km">
-<div class="menu">
-
-<div class="card" onclick="this.innerHTML='បានចុច Laptop 👍'">
-    <div class="icon">💻</div>
-    Laptop
-  </div>
-
-  <div class="card" onclick="alert('Computer')">
-    <div class="icon">🖥️</div>
-    Computer
-  </div>
-
-  <div class="card" onclick="alert('Accessories')">
-    <div class="icon">⌨️</div>
-    Accessories
-  </div>
-
-  <div class="card" onclick="alert('Service')">
-    <div class="icon">🔧</div>
-    Service
-  </div>
-
-</div>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Computer Oxford</title>
@@ -40,8 +18,8 @@ body{
 .header{
   background:#1677ff;
   color:white;
-  padding:25px 20px;
   text-align:center;
+  padding:22px 10px;
 }
 
 .header h1{
@@ -51,53 +29,44 @@ body{
 
 .header p{
   margin:8px 0 0;
-  font-size:16px;
 }
 
 .container{
   max-width:600px;
   margin:auto;
-  padding:20px;
+  padding:16px;
 }
 
-.welcome{
+.welcome,
+.card,
+.contact{
   background:white;
-  padding:20px;
   border-radius:16px;
+  padding:20px;
+  margin-bottom:14px;
   text-align:center;
-  margin-bottom:20px;
-}
-
-.welcome h2{
-  margin-top:0;
+  box-shadow:0 2px 8px #0001;
 }
 
 .menu{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:15px;
+  gap:14px;
 }
 
 .card{
-  background:white;
-  padding:25px 10px;
-  border-radius:16px;
-  text-align:center;
-  font-size:18px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  min-height:120px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:17px;
 }
 
 .icon{
-  font-size:38px;
-  margin-bottom:10px;
-}
-
-.contact{
-  margin-top:20px;
-  background:white;
-  padding:20px;
-  border-radius:16px;
-  text-align:center;
+  font-size:40px;
+  margin-bottom:8px;
 }
 
 .phone{
@@ -105,7 +74,7 @@ body{
   background:#1677ff;
   color:white;
   text-decoration:none;
-  padding:13px;
+  padding:12px;
   border-radius:10px;
   margin-top:10px;
 }
@@ -123,27 +92,27 @@ body{
 
   <div class="welcome">
     <h2>ស្វាគមន៍មកកាន់ Computer Oxford</h2>
-    <p>ទិញកុំព្យូទ័រ Laptop និងគ្រឿងបន្លាស់</p>
+    <p>ទំនិញកុំព្យូទ័រ Laptop និងគ្រឿងបន្លាស់</p>
   </div>
 
   <div class="menu">
 
-    <div class="card" onclick="alert('Laptop')">
-
+    <div class="card" onclick="showMessage('Laptop')">
+      <div class="icon">💻</div>
       Laptop
     </div>
 
-    <div class="card">
+    <div class="card" onclick="showMessage('Computer')">
       <div class="icon">🖥️</div>
       Computer
     </div>
 
-    <div class="card">
+    <div class="card" onclick="showMessage('Accessories')">
       <div class="icon">⌨️</div>
       Accessories
     </div>
 
-    <div class="card">
+    <div class="card" onclick="showMessage('Service')">
       <div class="icon">🔧</div>
       Service
     </div>
@@ -151,7 +120,7 @@ body{
   </div>
 
   <div class="contact">
-    <h2>📞 ទាក់ទងហាង</h2>
+    <h2>📞 ទំនាក់ទំនង</h2>
 
     <a class="phone" href="tel:012517853">
       012 517 853
@@ -163,6 +132,20 @@ body{
   </div>
 
 </div>
+
+<script>
+function showMessage(name){
+  if(window.Telegram && Telegram.WebApp){
+    Telegram.WebApp.showAlert("បានចុច " + name + " 👍");
+  }else{
+    alert("បានចុច " + name + " 👍");
+  }
+}
+
+if(window.Telegram && Telegram.WebApp){
+  Telegram.WebApp.ready();
+}
+</script>
 
 </body>
 </html>
