@@ -1,65 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Mini App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Oxford</title>
 
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 30px 20px;
-      margin: 0;
-      background: #f2f4f7;
-      color: #222;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f2f4f7;
+  color:#222;
+}
 
-    .box {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 30px 20px;
-      border-radius: 20px;
-    }
+.header{
+  background:#1677ff;
+  color:white;
+  padding:25px 20px;
+  text-align:center;
+}
 
-    h1 {
-      margin-bottom: 10px;
-    }
+.header h1{
+  margin:0;
+  font-size:28px;
+}
 
-    button {
-      padding: 14px 25px;
-      border: none;
-      border-radius: 12px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
+.header p{
+  margin:8px 0 0;
+  font-size:16px;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:20px;
+}
+
+.welcome{
+  background:white;
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.welcome h2{
+  margin-top:0;
+}
+
+.menu{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:25px 10px;
+  border-radius:16px;
+  text-align:center;
+  font-size:18px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.contact{
+  margin-top:20px;
+  background:white;
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.phone{
+  display:block;
+  background:#1677ff;
+  color:white;
+  text-decoration:none;
+  padding:13px;
+  border-radius:10px;
+  margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h1>My Mini App</h1>
-    <p>Welcome to my Telegram Mini App</p>
+<div class="header">
+  <h1>Computer Oxford</h1>
+  <p>Computer • Laptop • Accessories • Service</p>
+</div>
 
-    <button onclick="showMessage()">ចុចទីនេះ</button>
+<div class="container">
 
-    <p id="message"></p>
+  <div class="welcome">
+    <h2>ស្វាគមន៍មកកាន់ Computer Oxford</h2>
+    <p>ទិញកុំព្យូទ័រ Laptop និងគ្រឿងបន្លាស់</p>
   </div>
 
-  <script>
-    const tg = window.Telegram.WebApp;
-    tg.ready();
-    tg.expand();
+  <div class="menu">
 
-    function showMessage() {
-      document.getElementById("message").textContent =
-        "បានចុចរួចហើយ 👍";
-    }
-  </script>
+    <div class="card">
+      <div class="icon">💻</div>
+      Laptop
+    </div>
+
+    <div class="card">
+      <div class="icon">🖥️</div>
+      Computer
+    </div>
+
+    <div class="card">
+      <div class="icon">⌨️</div>
+      Accessories
+    </div>
+
+    <div class="card">
+      <div class="icon">🔧</div>
+      Service
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <h2>📞 ទាក់ទងហាង</h2>
+
+    <a class="phone" href="tel:012517853">
+      012 517 853
+    </a>
+
+    <a class="phone" href="tel:0978688585">
+      097 868 8585
+    </a>
+  </div>
+
+</div>
 
 </body>
 </html>
