@@ -141,15 +141,31 @@ body{
 <script>
 function showPage(name){
   document.body.innerHTML = `
-    <div style="padding:20px;text-align:center;font-family:Arial,sans-serif;">
-      <h1>🛒 ${name}</h1>
-      <h2>Computer Oxford</h2>
-      <p>សូមមើលទំនិញ និងព័ត៌មាន ${name}</p>
-      <p>📞 012 517 853</p>
-      <p>📞 097 868 8585</p>
-      <button onclick="location.reload()" style="padding:12px 25px;border:0;border-radius:10px;background:#1677ff;color:white;font-size:16px;">
-        ⬅️ ត្រឡប់ក្រោយ
-      </button>
+    <div style="padding:15px;font-family:Arial,sans-serif;text-align:center;">
+      <h1>💻 ${name}</h1>
+
+      <div style="background:white;border-radius:15px;padding:15px;box-shadow:0 2px 8px #ccc;">
+        <h2>Dell Vostro 15 3530</h2>
+
+        <p><b>Intel Core i3 13th Gen</b></p>
+        <p>RAM 8GB • SSD 512GB • 15.6"</p>
+        <p>Windows 11</p>
+
+        <h2 style="color:#1677ff;">💰 $475</h2>
+
+        <p>🎁 Free Mouse + Mouse Pad + Adapter + Bag</p>
+        <p>🛡️ Warranty 1 Year</p>
+
+        <a href="tel:012517853"
+           style="display:block;background:#1677ff;color:white;padding:12px;border-radius:10px;text-decoration:none;margin:10px;">
+           📞 ទាក់ទងហាង
+        </a>
+
+        <button onclick="location.reload()"
+          style="padding:12px 25px;border:0;border-radius:10px;background:#555;color:white;">
+          ⬅️ ត្រឡប់ក្រោយ
+        </button>
+      </div>
     </div>
   `;
 }
